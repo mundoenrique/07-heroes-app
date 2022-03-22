@@ -5,7 +5,7 @@ export function NavBarLink({ children, to, className = '', ...props }) {
 		<>
 			<NavLink
 				className={({ isActive }) =>
-					isActive ? `${className} active` : className
+					isActive ? `${className} active` : `${className}`
 				}
 				to={to}
 				{...props}
