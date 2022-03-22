@@ -17,7 +17,9 @@ export const NavBarLink = ({ children, to, className = '', ...props }) => {
 	);
 };
 
-export const getHeroesById = (id) => {};
+export const getHeroesById = (id = '') => {
+	return heroes.find((hero) => hero.id === id);
+};
 
 export const getHeroesByPublisher = (publisher) => {
 	const validPublishers = ['DC Comics', 'Marvel Comics'];
