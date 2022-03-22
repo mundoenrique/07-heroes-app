@@ -31,7 +31,7 @@ export default function HeroCard({
 									<small className="text-muted">{first_appearance}</small>
 								</p>
 								<Link
-									to={`/heroes/${id}`}
+									to={`/hero/${id}`}
 									className="pt-5 float-end btn btn-link"
 								>
 									Mas...
