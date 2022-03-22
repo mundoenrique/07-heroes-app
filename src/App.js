@@ -1,8 +1,11 @@
+import { BrowserRouter } from 'react-router-dom';
+import AppRouter from './routers/AppRouter';
+
 function App() {
 	return (
-		<>
-			<h1>Heroes App</h1>
-		</>
+		<BrowserRouter>
+			<AppRouter />
+		</BrowserRouter>
 	);
 }
 
