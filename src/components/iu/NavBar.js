@@ -1,12 +1,14 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { NavBarLink } from '../../helpers/toolHelper';
 
 export default function NavBar() {
+	const navigate = useNavigate();
+
 	const handleLogout = () => {
-		// TODO: Por hacer
-		console.log('logOut');
+		navigate('/login', { replace: true });
 	};
+
 	return (
 		<>
 			<nav className="navbar navbar-expand-sm navbar-dark bg-dark">
