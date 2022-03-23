@@ -1,13 +1,11 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function HeroCard({
+export default memo(function HeroCard({
 	id,
 	superhero,
-	publisher,
 	alter_ego,
 	first_appearance,
-	characters,
 }) {
 	const imgPath = `/assets/images/${id}.jpg`;
 
@@ -40,4 +38,4 @@ export default function HeroCard({
 			</div>
 		</>
 	);
-}
+});
