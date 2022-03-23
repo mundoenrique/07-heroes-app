@@ -1,4 +1,4 @@
-import { useReducer } from 'react';
+import { useEffect, useReducer } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 import { AuthContext, authReducer } from './helpers/authHelper';
@@ -10,6 +10,14 @@ const initReducer = () => {
 
 function App() {
 	const [user, dispatch] = useReducer(authReducer, {}, initReducer);
+
+	useEffect(() => {
+		if (!user) {
+			return;
+		}
+
+		localStorage.setItem('user', JSON.stringify(user));
+	}, [user]);
 
 	return (
 		<AuthContext.Provider

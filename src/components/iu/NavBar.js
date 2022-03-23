@@ -2,15 +2,20 @@ import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../helpers/authHelper';
 
-import { NavBarLink } from '../../helpers/toolHelper';
+import { NavBarLink, types } from '../../helpers/toolHelper';
 
 export default function NavBar() {
-	const navigate = useNavigate();
 	const {
 		user: { name },
+		dispatch,
 	} = useContext(AuthContext);
+	const navigate = useNavigate();
 
 	const handleLogout = () => {
+		dispatch({
+			type: types.logout,
+		});
+
 		navigate('/login', { replace: true });
 	};
 
