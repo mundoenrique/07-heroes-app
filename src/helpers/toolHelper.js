@@ -40,3 +40,8 @@ export const getHeroesByName = (name = '') => {
 
 	return heroes.filter((hero) => hero.superhero.toLowerCase().includes(name));
 };
+
+export const types = {
+	login: '[auth] login',
+	logout: '[auth] logout',
+};

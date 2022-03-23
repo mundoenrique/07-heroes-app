@@ -1,9 +1,14 @@
+import { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../helpers/authHelper';
 
 import { NavBarLink } from '../../helpers/toolHelper';
 
 export default function NavBar() {
 	const navigate = useNavigate();
+	const {
+		user: { name },
+	} = useContext(AuthContext);
 
 	const handleLogout = () => {
 		navigate('/login', { replace: true });
@@ -32,9 +37,7 @@ export default function NavBar() {
 
 				<div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
 					<ul className="navbar-nav ml-auto">
-						<span className="nav-item nav-link text-info">
-							Enrique Peñaloza
-						</span>
+						<span className="nav-item nav-link text-info">{name}</span>
 						<button className="btn nav-item nav-link" onClick={handleLogout}>
 							Logout
 						</button>
