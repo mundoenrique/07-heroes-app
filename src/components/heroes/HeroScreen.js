@@ -1,10 +1,12 @@
+import { useMemo } from 'react';
 import { Navigate, useNavigate, useParams } from 'react-router-dom';
+
 import { getHeroesById } from '../../helpers/toolHelper';
 
 export default function HeroScreen() {
 	const { heroId } = useParams();
 	const navigate = useNavigate();
-	const hero = getHeroesById(heroId);
+	const hero = useMemo(() => getHeroesById(heroId), [heroId]);
 
 	const handleReturn = () => {
 		navigate(-1);
