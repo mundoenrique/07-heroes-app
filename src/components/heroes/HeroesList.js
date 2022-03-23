@@ -6,7 +6,7 @@ export default function HeroesList({ publisher }) {
 	return (
 		<>
 			<hr />
-			<div className="row row-cols-1 row-cols-md-3 g-4">
+			<div className="row row-cols-1 row-cols-md-3 g-4 animate__animated animate__fadeIn">
 				{heroes.map((hero) => (
 					<HeroCard key={hero.id} {...hero} />
 				))}
