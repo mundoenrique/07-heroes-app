@@ -21,9 +21,11 @@ export default function NavBar() {
 						<NavBarLink className="nav-item nav-link" to="/marvel">
 							Marvel
 						</NavBarLink>
-
 						<NavBarLink className="nav-item nav-link" to="/dc">
 							DC
+						</NavBarLink>
+						<NavBarLink className="nav-item nav-link" to="/search">
+							Search
 						</NavBarLink>
 					</div>
 				</div>

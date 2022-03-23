@@ -30,10 +30,7 @@ export default function HeroCard({
 								<p className="card-text">
 									<small className="text-muted">{first_appearance}</small>
 								</p>
-								<Link
-									to={`/hero/${id}`}
-									className="pt-5 float-end btn btn-link"
-								>
+								<Link to={`/hero/${id}`} className="btn btn-link">
 									Mas...
 								</Link>
 							</div>

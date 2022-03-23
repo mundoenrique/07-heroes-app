@@ -30,3 +30,11 @@ export const getHeroesByPublisher = (publisher) => {
 
 	return heroes.filter((hero) => hero.publisher === publisher);
 };
+
+export const getHeroesByName = (name = '') => {
+	// name = name.toLowerCase();
+
+	// return heroes.filter((hero) => hero.superhero.toLowerCase().includes(name));
+
+	return [...heroes];
+};
