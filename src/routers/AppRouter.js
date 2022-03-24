@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 
-import LoginScree from '../components/login/LoginScree';
+import LoginScreen from '../components/login/LoginScreen';
 import PublicRouter from './PublicRouter';
 import PrivateRouter from './PrivateRouter';
 import DashboardRouter from './DashboardRouter';
@@ -13,7 +13,7 @@ export default function AppRouter() {
 					path="/login"
 					element={
 						<PublicRouter>
-							<LoginScree />
+							<LoginScreen />
 						</PublicRouter>
 					}
 				/>

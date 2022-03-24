@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../helpers/authHelper';
 import { types } from '../../helpers/toolHelper';
 
-export default function LoginScree() {
+export default function LoginScreen() {
 	const navigate = useNavigate();
 	const { dispatch } = useContext(AuthContext);
 
@@ -21,7 +21,7 @@ export default function LoginScree() {
 	return (
 		<>
 			<div className="container mt-5">
-				<h1>LoginScree</h1>
+				<h1>LoginScreen</h1>
 				<hr />
 				<button className="btn btn-primary" onClick={handleLogin}>
 					Login

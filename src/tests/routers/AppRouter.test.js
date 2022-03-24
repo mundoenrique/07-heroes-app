@@ -1,5 +1,5 @@
 import { mount } from 'enzyme';
-import { BrowserRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import { AuthContext } from '../../helpers/authHelper';
 import AppRouter from '../../routers/AppRouter';
 
@@ -13,14 +13,14 @@ describe('Pruebas sobre <AppRouter />', () => {
 
 		const wrapper = mount(
 			<AuthContext.Provider value={contextValue}>
-				<BrowserRouter>
+				<MemoryRouter>
 					<AppRouter />
-				</BrowserRouter>
+				</MemoryRouter>
 			</AuthContext.Provider>
 		);
 
 		expect(wrapper).toMatchSnapshot();
-		expect(wrapper.find('h1').text().trim()).toBe('LoginScree');
+		expect(wrapper.find('h1').text().trim()).toBe('LoginScreen');
 	});
 
 	test('Debe mostrar el dashboard si el usuario esta autenticado', () => {
@@ -33,9 +33,9 @@ describe('Pruebas sobre <AppRouter />', () => {
 
 		const wrapper = mount(
 			<AuthContext.Provider value={contextValue}>
-				<BrowserRouter>
+				<MemoryRouter>
 					<AppRouter />
-				</BrowserRouter>
+				</MemoryRouter>
 			</AuthContext.Provider>
 		);
 
