@@ -13,7 +13,7 @@ export default function HeroScreen() {
 	};
 
 	if (!hero) {
-		<Navigate to="/" />;
+		return <Navigate to="/" />;
 	}
 
 	const { id, superhero, publisher, alter_ego, first_appearance, characters } =
