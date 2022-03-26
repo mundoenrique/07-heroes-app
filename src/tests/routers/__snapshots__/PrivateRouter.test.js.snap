@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas sobre <PrivateRouter.test /> Debe validar la autenticación y escribir en el localstorage 1`] = `
+<h1>
+  Private Route
+</h1>
+`;
