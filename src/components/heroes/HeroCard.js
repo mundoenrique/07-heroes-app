@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
+import { heroImages } from '../../helpers/toolHelper';
 
 export default memo(function HeroCard({
 	id,
@@ -7,7 +8,7 @@ export default memo(function HeroCard({
 	alter_ego,
 	first_appearance,
 }) {
-	const imgPath = `/assets/images/${id}.jpg`;
+	// const imgPath = `/assets/images/${id}.jpg`;
 
 	return (
 		<>
@@ -16,7 +17,8 @@ export default memo(function HeroCard({
 					<div className="row g-0">
 						<div className="col-md-4">
 							<img
-								src={imgPath}
+								// src={imgPath}
+								src={heroImages(`./${id}.jpg`)}
 								className="img-fluid rounded-start"
 								alt={superhero}
 							/>
